@@ -1,0 +1,21 @@
+  /* html {
+    width: 4000px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  } */
+
+  body {
+    height: 400vh;
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 520vh;
+    height: 100vh;
+
+    background-image: url('img/background_schiacciato.jpg');
+    background-size: cover;
+  }
