@@ -1,0 +1,88 @@
+/* html {
+  width: 4000px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  height: 500vh;
+  margin: 0;
+  padding: 0;
+}
+
+.dead {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 3px 3px black;
+  display: none;
+}
+
+section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500vh;
+  height: 100vh;
+
+  background-image: url('assets/background-spv.png');
+  background-size: cover;
+}
+
+#entryVedelago {
+  position: absolute;
+  top: -40px;
+  right: 320px;
+  color: transparent;
+  font-weight: 800;
+  font-size: 150px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#imgVedelago {
+  position: absolute;
+  width: 30%;
+  top: 200px;
+  right: 100px;
+  z-index: 101;
+  display: none;
+  border: 5px solid  #00ff00;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+}
+
+#textVedelago {
+  position: absolute;
+  width: 40%;
+  top: 350px;
+  right: 800px;
+  z-index: 101;
+  font-size: 30px;
+  font-weight: 800;
+  color: #00ff00;
+  text-shadow: 3px 3px black;
+  display: none;
+}
+
+#gifVedelago {
+  position: absolute;
+  width: 30%;
+  top: 30px;
+  right: 800px;
+  z-index: 101;
+  display: none;
+  border: 5px solid  #00ff00;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+}
