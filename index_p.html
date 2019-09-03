@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <section></section> <!-- background -->
+
+  <div class="pulsating-circle">XXX</div>
+
+  <div class="dead" style="width:100%; height:100%;">
+    The Pedemontana Veneta  is the largest public work currently under construction in Italy. Once completed, it will be 94km long and connect 36 municipalities between Vicenza and Treviso. But at what price?
+    <br>
+    In different locations,  its construction has crossed through old landfills and uncovered toxic waste, threatening the biodiversity of these areas.
+    It has also dispossessed the lands of about 3,000 farms, with serious consequences for farmers and their families.
+    While the works are proceeding very slowly, this photographic project aims to be an observation of the impact that a huge public project can have on the landscape and the communities that inhabit it.
+    <br>
+    Superstrada Pedemontana Veneta SPA is a journey on foot in 36 stages, in the productive heart of the North East, realized with a mix of photography, satellite images, objects, documents and interviews with the locals.
+    <br>
+    A careful exploration aimed at mapping a road which was born to unite, but ended up dividing.
+  </div>
+  <div class="container">
+    <div class="entry" id="entryVedelago">.</div>
+      <img id="imgVedelago" src="assets/pettorina.png">
+      <p id="textVedelago">
+        <i>Since the 2000s, track and field athletes at major competitions wear
+          their names as well as their numbers on their bibs. Powerlifters wear a
+          bib benchpress shirt across their chest area to help them lift more weight.
+          In Netball, bibs are used by the umpire to identify players' positions so
+          it can be determined who is within their allowed area.</i>
+      </p>
+      <!-- <img id="gifVedelago" src="assets/vedelago_gif.gif"> -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+
+  <script>
+
+	$("#entryVedelago").hover( function() { $("#imgVedelago").toggle(); } );
+	$("#entryVedelago").hover( function() { $("#textVedelago").toggle(); } );
+	$("#entryVedelago").hover( function() { $("#gifVedelago").toggle(); } );
+
+  </script>
+
+
+</body>
