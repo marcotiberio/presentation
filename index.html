@@ -8,27 +8,31 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
   <header>
-    <div>ABOUT</div>
+    <div data-toggle="modal" data-target="#aboutModal">ABOUT</div>
     <div style="text-align: right;">ARCHIVE</div>
   </header>
 
   <section></section> <!-- background -->
 
   <div class="container">
-    <div class="entry" id="entryVedelago">.</div>
+    <div class="entry" id="entryVedelago1">.</div>
+    <div class="entry" id="entryVedelago2">.</div>
     <div class="blink-container" id="blink1">
       <div class="blink-pulse"></div>
     </div>
+    <div class="blink-container" id="blink2">
+      <div class="blink-pulse"></div>
+    </div>
       <!-- <img id="imgVedelago" src="assets/vedelago.jpg"> -->
-      <p id="textVedelago">
-        <i>Abdul, 42, farmer</i>
+      <p id="textVedelago1">
+        <u>Abdul, 42, farmer</u>
           <br>
           Abdul had only ever used his Dodge Ram Turbo Diesel to transport crops,
           sheep and goats before he decided to convert it into a gilla (or Technical)– an
@@ -37,7 +41,16 @@
           “When I am on the front line I am not scared; I am only scared of Allah. In
           the future I dream of being free, and then we will see about the rest.”
       </p>
-      <!-- <img id="gifVedelago" src="assets/vedelago_gif.gif"> -->
+      <img id="gifVedelago1" src="assets/test-photo/rocket-gif.gif">
+      <p id="textVedelago2">
+        <u>UB-32 57MM Rocket Pod</u>
+          <br>
+          Originally attached to Soviet Mi-24 helicopters, this pod can be attached
+          to a Technical and still fire its 32 rockets, although there is no way to aim
+          them effectively. Their already low accuracy is further diminished when firing
+          from an improvised platform in an unintended role. Therefore, such systems
+          proved little more than curiosities in regular armies.
+      </p>
   </div>
 
 
@@ -52,9 +65,11 @@
 
   <script>
 
-	$("#entryVedelago").hover( function() { $("#imgVedelago").toggle(); } );
-	$("#entryVedelago").hover( function() { $("#textVedelago").toggle(); } );
-	$("#entryVedelago").hover( function() { $("#gifVedelago").toggle(); } );
+	$("#entryVedelago1").hover( function() { $("#imgVedelago").toggle(); } );
+	$("#entryVedelago1").hover( function() { $("#textVedelago1").toggle(); } );
+	$("#entryVedelago1").hover( function() { $("#gifVedelago1").toggle(); } );
+
+  $("#entryVedelago2").hover( function() { $("#textVedelago2").toggle(); } );
 
   </script>
 

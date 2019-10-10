@@ -31,8 +31,8 @@ body {
 }
 
 #blink2 {
-  bottom: 63%;    /*change this*/
-  left: 33%;  /*change this*/
+  top: 25%;    /*change this*/
+  left: 49%;  /*change this*/
 }
 
 #blink3 {
@@ -88,6 +88,8 @@ header {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 
+  font-weight: 400;
+
   padding: 1%;
 
   z-index: 100;
@@ -105,11 +107,23 @@ section {
   background-position: center;
 }
 
-#entryVedelago {
+#entryVedelago1 {
   position: absolute;
   top: 18%;
   right: 33%;
   color: red;
+  font-weight: 800;
+  font-size: 150px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#entryVedelago2 {
+  position: absolute;
+  top: 14%;
+  left: 48%;
+  color: blue;
   font-weight: 800;
   font-size: 150px;
   cursor: pointer;
@@ -130,7 +144,7 @@ section {
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
 }
 
-#textVedelago {
+#textVedelago1 {
   position: absolute;
   width: 40%;
   top: 10%;
@@ -139,7 +153,7 @@ section {
   padding: 1%;
   z-index: 101;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 400;
   color: black;
   display: none;
 
@@ -151,14 +165,35 @@ section {
   background-color: #f4f4f4;
 }
 
-#gifVedelago {
+#textVedelago2 {
+  position: absolute;
+  width: 40%;
+  top: 60%;
+  right: 3%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
+}
+
+#gifVedelago1 {
   position: absolute;
   width: 30%;
-  top: 30px;
-  right: 800px;
+  bottom: 10%;
+  left: 10%;
   z-index: 101;
   display: none;
-  border: 5px solid  #00ff00;
+  border: 5px solid black;
   -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
