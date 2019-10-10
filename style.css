@@ -1,17 +1,70 @@
-/* html {
-  width: 4000px;
+html {
+  width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-} */
-
-body {
-  height: 500vh;
   margin: 0;
   padding: 0;
 }
 
-.dead {
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Ubuntu Mono', monospace;
+
+  mix-blend-mode: difference;
+}
+
+.blink-container {
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: absolute;
+
+  z-index: 200000;
+}
+
+#blink1 {
+  top: 28%;    /*change this*/
+  right: 35%;  /*change this*/
+}
+
+#blink2 {
+  bottom: 63%;    /*change this*/
+  left: 33%;  /*change this*/
+}
+
+#blink3 {
+  bottom: 40%;    /*change this*/
+  left: 20%;  /*change this*/
+}
+
+/* .blink-dot {
+  border-radius: 50%;
+  background-color: #0091D7;
+  width: 10px;
+  height: 10px;
+} */
+
+.blink-pulse {
+  background-color: #0091D7;
+  opacity: 0.75;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transform: scale(1);
+  animation: blink-pulse-anim 2s infinite;
+  -webkit-animation-iteration-count: 3;
+}
+
+@keyframes blink-pulse-anim {
+  0% { opacity: 0.75; transform: scale(1)}
+  100% { opacity: 0; transform: scale(4)}
+}
+
+/* .dead {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -23,24 +76,40 @@ body {
   color: white;
   text-shadow: 3px 3px black;
   display: none;
+} */
+
+header {
+  position: relative;
+  top: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  padding: 1%;
+
+  z-index: 100;
 }
 
 section {
   position: fixed;
   top: 0;
   right: 0;
-  width: 500vh;
+  width: 100vw;
   height: 100vh;
 
-  background-image: url('assets/background-spv.png');
+  background-image: url('assets/test-photo/Abdul_Waled_exp_final.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 #entryVedelago {
   position: absolute;
-  top: -40px;
-  right: 320px;
-  color: transparent;
+  top: 18%;
+  right: 33%;
+  color: red;
   font-weight: 800;
   font-size: 150px;
   cursor: pointer;
@@ -64,14 +133,22 @@ section {
 #textVedelago {
   position: absolute;
   width: 40%;
-  top: 350px;
-  right: 800px;
+  top: 10%;
+  left: 3%;
+
+  padding: 1%;
   z-index: 101;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 800;
-  color: #00ff00;
-  text-shadow: 3px 3px black;
+  color: black;
   display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
 }
 
 #gifVedelago {
@@ -85,4 +162,19 @@ section {
   -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+}
+
+footer {
+  position: relative;
+  top: 88%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  padding: 1%;
+
+  z-index: 100;
 }
