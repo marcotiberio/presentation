@@ -19,13 +19,46 @@ p {
   padding: 0;
 }
 
+/*--------------------------------------------------------------
+## Loader
+--------------------------------------------------------------*/
+
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  z-index: 5000;
+}
+
+.loader-text {
+  font-size: 13em;
+  /* animation: blinker 1s linear infinite; */
+}
+
+/* @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+} */
+
+/*--------------------------------------------------------------
+## Blinking Spots
+--------------------------------------------------------------*/
+
 .blink-container {
   width: 25px;
   height: 25px;
   display: block;
   position: absolute;
 
-  z-index: 200000;
+  z-index: 2000;
 }
 
 #blink1 {
@@ -39,13 +72,13 @@ p {
 }
 
 #blink3 {
-  bottom: 40%;    /*change this*/
-  left: 20%;  /*change this*/
+  top: 54%;
+  left: 24%;
 }
 
 /* .blink-dot {
   border-radius: 50%;
-  background-color: #0091D7;
+  background-color: #f4f4f4;
   width: 10px;
   height: 10px;
 } */
@@ -59,7 +92,7 @@ p {
   position: absolute;
   transform: scale(1);
   animation: blink-pulse-anim 2s infinite;
-  -webkit-animation-iteration-count: 3;
+  -webkit-animation-iteration-count: 5;
 }
 
 @keyframes blink-pulse-anim {
@@ -67,19 +100,9 @@ p {
   100% { opacity: 0; transform: scale(4)}
 }
 
-/* .dead {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  font-size: 42px;
-  font-weight: 800;
-  color: white;
-  text-shadow: 3px 3px black;
-  display: none;
-} */
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
 
 header {
   position: relative;
@@ -103,116 +126,8 @@ header {
   text-decoration: underline;
 }
 
-section {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-
-  background-image: url('assets/test-photo/Abdul_Waled_exp_final.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#entryVedelago1 {
-  position: absolute;
-  top: 18%;
-  right: 33%;
-  color: transparent;
-  font-weight: 800;
-  font-size: 150px;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-}
-
-#entryVedelago2 {
-  position: absolute;
-  top: 14%;
-  left: 48%;
-  color: transparent;
-  font-weight: 800;
-  font-size: 150px;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-}
-
-#imgVedelago {
-  position: absolute;
-  width: 30%;
-  top: 200px;
-  right: 100px;
-  z-index: 101;
-  display: none;
-  border: 5px solid  #00ff00;
-  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-}
-
-#textVedelago1 {
-  position: absolute;
-  width: 40%;
-  top: 10%;
-  left: 3%;
-
-  padding: 1%;
-  z-index: 101;
-  font-size: 20px;
-  font-weight: 400;
-  color: black;
-  display: none;
-
-  border: 5px solid black;
-  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-
-  background-color: #f4f4f4;
-}
-
-#textVedelago2 {
-  position: absolute;
-  width: 40%;
-  top: 60%;
-  right: 3%;
-
-  padding: 1%;
-  z-index: 101;
-  font-size: 20px;
-  font-weight: 400;
-  color: black;
-  display: none;
-
-  border: 5px solid black;
-  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-
-  background-color: #f4f4f4;
-}
-
-#text-caption {
-  position: absolute;
-  width: 50%;
-  left: 25%;
-  bottom: 2%;
-
-  padding: 1%;
-  z-index: 101;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  display: none;
-
-  border: 5px solid black;
-  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-
-  background-color: #f4f4f4;
+#button-archive:hover {
+  cursor: no-drop;
 }
 
 #text-about {
@@ -236,7 +151,134 @@ section {
   background-color: #f4f4f4;
 }
 
-#gifVedelago2 {
+/*--------------------------------------------------------------
+## Background
+--------------------------------------------------------------*/
+
+section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('assets/test-photo/Abdul_Waled_exp_final.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/*--------------------------------------------------------------
+## Main Container
+--------------------------------------------------------------*/
+
+#entry1 {
+  position: absolute;
+  top: 18%;
+  right: 33%;
+  color: transparent;
+  font-weight: 800;
+  font-size: 150px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#entry2 {
+  position: absolute;
+  top: 14%;
+  left: 48%;
+  color: transparent;
+  font-weight: 800;
+  font-size: 150px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#entry2:hover {
+  cursor: zoom-in;
+}
+
+#entry3 {
+  position: absolute;
+  top: 43%;
+  left: 23%;
+  color: transparent;
+  font-weight: 800;
+  font-size: 150px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#entry3:hover {
+  cursor: pointer;
+}
+
+#text1 {
+  position: absolute;
+  width: 40%;
+  top: 10%;
+  left: 3%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
+}
+
+#text2 {
+  position: absolute;
+  width: 40%;
+  top: 60%;
+  right: 3%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
+}
+
+#text3 {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  right: 3%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
+}
+
+#gif2 {
   position: absolute;
   width: 30%;
   bottom: 10%;
@@ -248,6 +290,23 @@ section {
   -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
 }
+
+#img {
+  position: absolute;
+  width: 30%;
+  top: 200px;
+  right: 100px;
+  z-index: 101;
+  display: none;
+  border: 5px solid  #00ff00;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
 
 footer {
   position: relative;
@@ -267,4 +326,25 @@ footer {
 #button-caption:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+#text-caption {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  bottom: 2%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
 }

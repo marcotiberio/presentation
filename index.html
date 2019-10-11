@@ -14,24 +14,32 @@
 
 <body>
 
+  <div id="loader">
+    <h1 class="loader-text">THE BIGGER<br>PICTURE</h1>
+  </div>
+
   <header>
     <div data-toggle="modal" data-target="#aboutModal"><p id="button-about">ABOUT</p></div>
-    <div style="text-align: right;">ARCHIVE (COMING SOON)</div>
+    <div style="text-align: right;"><p id="button-archive">ARCHIVE (COMING SOON)</p></div>
   </header>
 
   <section></section> <!-- background -->
 
   <div class="container">
-    <div class="entry" id="entryVedelago1">.</div>
-    <div class="entry" id="entryVedelago2">.</div>
+    <div class="entry" id="entry1">.</div>
+    <div class="entry" id="entry2">.</div>
+    <div class="entry" id="entry3">.</div>
     <div class="blink-container" id="blink1">
       <div class="blink-pulse"></div>
     </div>
     <div class="blink-container" id="blink2">
       <div class="blink-pulse"></div>
     </div>
+    <div class="blink-container" id="blink3">
+      <div class="blink-pulse"></div>
+    </div>
       <!-- <img id="imgVedelago" src="assets/vedelago.jpg"> -->
-      <p id="textVedelago1">
+      <p id="text1">
         <u>Abdul, 42, farmer</u>
           <br>
           Abdul had only ever used his Dodge Ram Turbo Diesel to transport crops,
@@ -42,7 +50,7 @@
           the future I dream of being free, and then we will see about the rest.”
       </p>
       <!-- <img id="gifVedelago1" src="assets/test-photo/rocket-gif.gif"> -->
-      <p id="textVedelago2">
+      <p id="text2">
         <u>UB-32 57MM Rocket Pod</u>
           <br>
           Originally attached to Soviet Mi-24 helicopters, this pod can be attached
@@ -51,12 +59,25 @@
           from an improvised platform in an unintended role. Therefore, such systems
           proved little more than curiosities in regular armies.
       </p>
-      <img id="gifVedelago2" src="assets/test-photo/rocket-gif.gif">
+      <img id="gif2" src="assets/test-photo/rocket-gif.gif">
+      <p id="text3">
+        <u>Dodge Ram Turbo Diesel pick-up (gilla, or Technical)</u>
+          <br>
+          From afghanistan to Sudan to Libya, the Toyota Hilux pick-up is the favored vehicle
+          for making Technicals. In the 1987 Libya-Chad war, Chadian Technical drivers
+          discovered that if a Hilux is driven through a minefield at over 100 kilometers
+          an hour, it won’t detonate the mines. And the open-back is perfect for all sorts of weaponry.
+      </p>
       <p id="text-about">
-          “We never approach an image with a blank mind but with a mind already primed with memories, knowledge, prejudices.”
+          “We never approach an image with a blank mind but with a mind already primed
+          with memories, knowledge, prejudices.”
           John A. Walker
           <br><br>
-          The Bigger Picture is the photography blog where you can enjoy big photos, like you rarely find on the Web, and learn more about their contexts by zooming in on selected details of the photos and read facts, curious information, anecdotes about them. The Bigger Picture plays with the relationship between the picture and its bigger picture, and wants to make you stay more on a picture, engage with it, think about it.
+          The Bigger Picture is the photography blog where you can enjoy big photos,
+          like you rarely find on the Web, and learn more about their contexts by zooming
+          in on selected details of the photos and read facts, curious information, anecdotes
+          about them. The Bigger Picture plays with the relationship between the picture and its
+          bigger picture, and wants to make you stay more on a picture, engage with it, think about it.
           <br><br>
           Curated by Mauro Bedoni, website developed by Defrost Studio.
       </p>
@@ -85,19 +106,39 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script src="zoom.js"></script>
 
 
   <script>
 
-	$("#entryVedelago1").hover( function() { $("#imgVedelago").toggle(); } );
-	$("#entryVedelago1").hover( function() { $("#textVedelago1").toggle(); } );
-	$("#entryVedelago1").hover( function() { $("#gifVedelago1").toggle(); } );
+	$("#entry1").hover( function() { $("#text1").toggle(); } );
 
-  $("#entryVedelago2").hover( function() { $("#textVedelago2").toggle(); } );
-  $("#entryVedelago2").hover( function() { $("#gifVedelago2").toggle(); } );
+  $("#entry2").hover( function() { $("#text2").toggle(); } );
+  $("#entry2").hover( function() { $("#gif2").toggle(); } );
+
+  $("#entry3").hover( function() { $("#text3").toggle(); } );
+
 
   $("#button-caption").hover( function() { $("#text-caption").toggle(); } );
   $("#button-about").hover( function() { $("#text-about").toggle(); } );
+
+
+  // LOADER
+  $(function() {
+      // setTimeout() function will be fired after page is loaded
+      // it will wait for 5 sec. and then will fire
+      // $("#successMessage").hide() function
+      setTimeout(function() {
+        $("#loader").fadeOut()
+      }, 2000);
+    });
+
+
+    // ZOOM
+		document.querySelector( '.container' ).addEventListener( 'click', function( event ) {
+			event.preventDefault();
+			zoom.to({ element: event.target });
+		} );
 
   </script>
 
