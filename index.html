@@ -15,8 +15,8 @@
 <body>
 
   <header>
-    <div data-toggle="modal" data-target="#aboutModal">ABOUT</div>
-    <div style="text-align: right;">ARCHIVE</div>
+    <div data-toggle="modal" data-target="#aboutModal"><p id="button-about">ABOUT</p></div>
+    <div style="text-align: right;">ARCHIVE (COMING SOON)</div>
   </header>
 
   <section></section> <!-- background -->
@@ -52,12 +52,35 @@
           proved little more than curiosities in regular armies.
       </p>
       <img id="gifVedelago2" src="assets/test-photo/rocket-gif.gif">
+      <p id="text-about">
+          “We never approach an image with a blank mind but with a mind already primed with memories, knowledge, prejudices.”
+          John A. Walker
+          <br><br>
+          The Bigger Picture is the photography blog where you can enjoy big photos, like you rarely find on the Web, and learn more about their contexts by zooming in on selected details of the photos and read facts, curious information, anecdotes about them. The Bigger Picture plays with the relationship between the picture and its bigger picture, and wants to make you stay more on a picture, engage with it, think about it.
+          <br><br>
+          Curated by Mauro Bedoni, website developed by Defrost Studio.
+      </p>
+      <p id="text-caption">
+          Abdul, 42, farmer, coming back from the frontline with Waled in his modified
+          pick-up truck near Ajdabiya, Libya. June 1, 2011.
+          <br><br>
+          On February 15, 2011, Libyans began to protest against Qaddafi’s 41-year-old
+          dictatorship. Qaddafi’s response was to send his army to attack the protesters.
+          In response the civilian population began to arm itself and fight back.
+          <br>
+          "In May when Qaddafi had gone into hiding, I travelled with an assistant
+          to photograph the trucks. We set-up the camera at the last check point, on the
+          road to the front line, where my assistant ran out to stop them, before they went
+          into battle."
+          <br><br>
+          James Mollison
+      </p>
   </div>
 
 
   <footer>
     <div></div>
-    <div style="text-align: right;"><i>CAPTION<i></div>
+    <div style="text-align: right;"><i id="button-caption">CAPTION<i></div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -72,6 +95,9 @@
 
   $("#entryVedelago2").hover( function() { $("#textVedelago2").toggle(); } );
   $("#entryVedelago2").hover( function() { $("#gifVedelago2").toggle(); } );
+
+  $("#button-caption").hover( function() { $("#text-caption").toggle(); } );
+  $("#button-about").hover( function() { $("#text-about").toggle(); } );
 
   </script>
 

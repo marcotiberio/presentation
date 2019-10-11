@@ -14,6 +14,11 @@ body {
   font-family: 'Ubuntu Mono', monospace;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .blink-container {
   width: 25px;
   height: 25px;
@@ -91,6 +96,11 @@ header {
   padding: 1%;
 
   z-index: 100;
+}
+
+#button-about:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 section {
@@ -184,6 +194,48 @@ section {
   background-color: #f4f4f4;
 }
 
+#text-caption {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  bottom: 2%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
+}
+
+#text-about {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+
+  padding: 1%;
+  z-index: 101;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: none;
+
+  border: 5px solid black;
+  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+
+  background-color: #f4f4f4;
+}
+
 #gifVedelago2 {
   position: absolute;
   width: 30%;
@@ -210,4 +262,9 @@ footer {
   padding: 1%;
 
   z-index: 100;
+}
+
+#button-caption:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
