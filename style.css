@@ -109,7 +109,7 @@ section {
   position: absolute;
   top: 18%;
   right: 33%;
-  color: red;
+  color: transparent;
   font-weight: 800;
   font-size: 150px;
   cursor: pointer;
@@ -121,7 +121,7 @@ section {
   position: absolute;
   top: 14%;
   left: 48%;
-  color: blue;
+  color: transparent;
   font-weight: 800;
   font-size: 150px;
   cursor: pointer;
