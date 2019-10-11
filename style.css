@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Archivo', sans-serif;
 }
 
 p {
@@ -144,9 +144,9 @@ header {
   display: none;
 
   border: 5px solid black;
-  -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 700px 600px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 700px 600px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 700px 600px rgba(0,0,0,0.75);
 
   background-color: #f4f4f4;
 }
