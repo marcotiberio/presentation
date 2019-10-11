@@ -46,7 +46,7 @@ body {
 } */
 
 .blink-pulse {
-  background-color: #0091D7;
+  background-color: #f4f4f4;
   opacity: 0.75;
   border-radius: 50%;
   width: 50px;
